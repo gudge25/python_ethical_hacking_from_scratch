@@ -4,7 +4,10 @@ from scapy.layers.l2 import arping
 
 
 def scan(ip):
-    arping(ip)
+    arp_request = scapy.ARP()
+    #arping(ip)
+    print(arp_request.summary)
+    
 
 
 #scan("192.168.100.1")
